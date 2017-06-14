@@ -1,0 +1,50 @@
+{
+  "name": "build-your-own-radar",
+  "version": "0.3.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover jasmine",
+    "dev": "webpack-dev-server --dev --inline",
+    "build": "webpack --prod",
+    "examples:clean": "rm -rf examples/",
+    "examples:copy": "mkdir examples && cp -r dist/* examples",
+    "examples": "npm run build && npm run examples:clean && npm run examples:copy",
+    "publishExamples": "node ./scripts/publish-examples.js"
+  },
+  "author": "ThoughtWorks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thoughtworks/build-your-own-radar"
+  },
+  "keywords": [
+    "tech-radar"
+  ],
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.5.2",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.10.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1",
+    "xmlhttprequest": "^1.8.0",
+    "yargs": "^5.0.0"
+  },
+  "dependencies": {
+    "chance": "^1.0.4",
+    "d3": "^4.2.6",
+    "d3-tip": "^0.7.1",
+    "lodash": "^4.16.2",
+    "sanitize-html": "^1.13.0",
+    "tabletop": "^1.4.3"
+  }
+}
